@@ -4,6 +4,7 @@ import { CreatebookComponent } from './book/createbook/createbook.component';
 import { DeletebookComponent } from './book/deletebook/deletebook.component';
 import { EditbookComponent } from './book/editbook/editbook.component';
 import { ListbookComponent } from './book/listbook/listbook.component';
+import { VerdetallebookComponent } from './book/verdetallebook/verdetallebook.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -34,6 +35,11 @@ const routes: Routes = [
   {
     path:'deletebook/:idBook',
     component:DeletebookComponent
+  }
+  ,
+  {
+    path:'verdetallebook/:idBook',
+    component:VerdetallebookComponent
   }
 ];
 

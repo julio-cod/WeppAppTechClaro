@@ -9,7 +9,7 @@ import { BookService } from 'src/app/services/book.service';
   styleUrls: ['./listbook.component.css']
 })
 export class ListbookComponent implements OnInit {
-  displayedColumns: string[] = ['Id', 'Title', 'Description', 'PageCount','PublishDate', 'modificar', 'eliminar'];
+  displayedColumns: string[] = ['Id', 'Title', 'Description', 'PageCount','PublishDate','ver', 'modificar', 'eliminar'];
   public dataSource:any = [];
   public form!: FormGroup;
   IdBook= '';

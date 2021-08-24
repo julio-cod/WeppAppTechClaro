@@ -47,6 +47,11 @@
     <td mat-cell *matCellDef="let element"> {{element.publishDate}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="ver">
+    <th mat-header-cell *matHeaderCellDef> <span class="tituloCell"></span> </th>
+    <td mat-cell><a class="btn" *matCellDef="let element" [routerLink]="['/','verdetallebook' ,element.id]"><span class=""><mat-icon>visibility</mat-icon></span></a></td>
+  </ng-container>
+
     <ng-container matColumnDef="modificar">
       <th mat-header-cell *matHeaderCellDef> <span class="tituloCell"></span> </th>
       <td mat-cell><a class="btn" *matCellDef="let element" [routerLink]="['/','editbook' ,element.id]"><span class=""><mat-icon>edit</mat-icon></span></a></td>

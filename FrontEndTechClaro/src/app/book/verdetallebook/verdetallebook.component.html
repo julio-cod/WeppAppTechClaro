@@ -1,0 +1,52 @@
+<div>
+    <div class="container">
+        <div>
+            <h1>Vizualizacion de Libro</h1>
+        </div>
+    <div class="containerItem">
+    <div id="containerform" >
+        <form [formGroup]="form" id="formBook" >
+        
+          <div style="text-align: center;" >    
+             <div>
+              <mat-form-field class="matForm">
+                <mat-label>Id</mat-label>
+                <input [(ngModel)]="Id" formControlName="txtId" class="text-Id" id="txtId" matInput placeholder="Id" readonly >
+              </mat-form-field>
+            </div>
+              <div>
+                <mat-form-field class="matForm">
+                  <mat-label>Title</mat-label>
+                  <input [(ngModel)]="Title" formControlName="txtTitle" class="text-Title" id="txtTitle" matInput placeholder="Title" readonly >
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="matForm">
+                  <mat-label>Description</mat-label>
+                  <input [(ngModel)]="Description" formControlName="txtDescription" class="text-Description" id="txtDescription" matInput placeholder="Description" readonly >
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="matForm">
+                  <mat-label>PageCount</mat-label>
+                  <input [(ngModel)]="PageCount" formControlName="txtPageCount" class="text-PageCount" id="txtPageCount" matInput placeholder="PageCount" readonly >
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="matForm">
+                  <mat-label>Excerpt</mat-label>
+                  <input [(ngModel)]="Excerpt" formControlName="txtExcerpt" class="text-Excerpt" id="txtExcerpt"  matInput placeholder="Excerpt" readonly >
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field class="matForm">
+                  <mat-label>PublishDate</mat-label>
+                  <input [(ngModel)]="PublishDate" formControlName="txtPublishDate" class="text-PublishDate" id="txtPublishDate"  matInput placeholder="PublishDate" readonly >
+                </mat-form-field>
+              </div>
+            </div>
+        </form>
+      </div>
+  </div>
+    </div>
+    </div>
