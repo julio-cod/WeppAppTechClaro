@@ -1,0 +1,62 @@
+<h1>Lista de Libros</h1>
+<form [formGroup]="form" id="formProducto" errorTailor >
+<div> 
+    <mat-form-field class="matForm" style="margin: 2%;">
+        <mat-label>Buscar Book</mat-label>
+        <input [(ngModel)]="IdBook" formControlName="txtIdBook" class="text-IdBook" id="txtIdBook" matInput placeholder="IdBook" (keypress)="onlyNumberKey($event)" >
+      </mat-form-field>
+      <button mat-raised-button color="primary" class="button" (click)="buscarBook()" style="margin: 2%;">Buscar</button>
+      <button mat-raised-button color="primary" class="button" (click)="cargarListBooks()">Listar Todos</button>
+</div>
+</form>
+<br/>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Id">
+      <th mat-header-cell *matHeaderCellDef><span class="tituloCell"> Id </span> </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Title">
+      <th mat-header-cell *matHeaderCellDef><span class="tituloCell"> Title </span> </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Description">
+      <th mat-header-cell *matHeaderCellDef><span class="tituloCell"> Description</span> </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="PageCount">
+        <th mat-header-cell *matHeaderCellDef><span class="tituloCell"> PageCount</span> </th>
+        <td mat-cell *matCellDef="let element"> {{element.pageCount}} </td>
+      </ng-container>
+  
+ 
+
+    <!-- Weight Column -->
+   <ng-container matColumnDef="PublishDate">
+    <th mat-header-cell *matHeaderCellDef><span class="tituloCell"> PublishDate</span> </th>
+    <td mat-cell *matCellDef="let element"> {{element.publishDate}} </td>
+  </ng-container>
+
+    <ng-container matColumnDef="modificar">
+      <th mat-header-cell *matHeaderCellDef> <span class="tituloCell"></span> </th>
+      <td mat-cell><a class="btn" *matCellDef="let element" [routerLink]="['/','editbook' ,element.id]"><span class=""><mat-icon>edit</mat-icon></span></a></td>
+    </ng-container>
+
+    <ng-container matColumnDef="eliminar">
+      <th mat-header-cell *matHeaderCellDef><span class="tituloCell"></span> </th>
+      <td mat-cell><a class="btn" *matCellDef="let element" [routerLink]="['/','deletebook' ,element.id]"><span class=""><mat-icon>delete</mat-icon></span></a></td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

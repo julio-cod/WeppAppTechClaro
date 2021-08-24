@@ -1,0 +1,28 @@
+
+#formBook{
+    display: inline-block;
+}
+
+#containerform {
+    width: 100%;
+}
+
+.container {
+    text-align: center; 
+    
+    
+}
+
+.matForm{
+    width: 150%;
+    max-width: 150%;
+    
+}
+  
+  .containerItem {
+    display: flex;
+    justify-content: center;
+    
+    flex-flow: row wrap;
+    
+  }
